@@ -37,8 +37,8 @@ if __name__ == "__main__" :
     
     photoid = 454345
 
-    json = get_photo_detailed_json(photoid)
-    print json
+    #json = get_photo_detailed_json(photoid)
+    #print json
 
     xml = get_photo_detailed_xml(photoid)
     print xml

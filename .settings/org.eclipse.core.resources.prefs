@@ -1,7 +1,10 @@
 eclipse.preferences.version=1
+encoding//source/python/photos/get-photo-comments.py=utf8
+encoding//source/python/photos/get-photo-detailed.py=utf8
 encoding//source/python/photos/get-photo-likes.py=utf8
 encoding//source/python/photos/get-photo-popular.py=utf8
 encoding//source/python/photos/get-photo.py=utf8
+encoding//source/python/photos/get-photos-by-emotion.py=utf8
 encoding//source/python/photos/get-photos-by-tag.py=utf8
 encoding//source/python/users/get-user-musics.py=utf8
 encoding//source/python/users/get-user.py=utf8
