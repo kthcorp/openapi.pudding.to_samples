@@ -3,7 +3,7 @@ import simplejson, urllib
 import urllib2
 
 """
-5.2.5 user duplicated check
+2-05 user duplicated check
 
 format : https://api.pudding.to/v1/users/duplicate?appToen=APP_TOKEN&email={emailaddress}
 sample : https://api.pudding.to/v1/users/duplicate?appToken=APP_TOKEN&email=km9ace%40gmail.com

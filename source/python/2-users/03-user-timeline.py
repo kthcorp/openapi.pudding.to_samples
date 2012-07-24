@@ -3,7 +3,7 @@ import simplejson, urllib
 import urllib2
 
 """
-5.2.3 user timeline
+2-03 get user timeline
 
 format : https://api.pudding.to/v1/users/{user-id}/timeline?appToen=APP_TOKEN
 sample : https://api.pudding.to/v1/users/181651/timeline?appToken=APP_TOKEN

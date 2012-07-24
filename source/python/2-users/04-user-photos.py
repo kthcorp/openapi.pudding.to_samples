@@ -3,7 +3,7 @@ import simplejson, urllib
 import urllib2
 
 """
-5.2.4 user's photos
+2-04 get user's photos
 
 format : https://api.pudding.to/v1/users/{user-id}/photos?appToen=APP_TOKEN
 sample : https://api.pudding.to/v1/users/181651/photos?appToken=APP_TOKEN
@@ -17,7 +17,7 @@ USER_ID = 181651
 
 def get_user_photos_json(userid, **args):
     """
-    get user's timeline
+    get user's photos
     """
     args.update({
             'access_key': ACCESS_KEY
@@ -30,7 +30,7 @@ def get_user_photos_json(userid, **args):
 
 def get_user_photos_xml(userid, **args):
     """
-    get user's timeline
+    get user's photos
     """
     args.update({
             'access_key': ACCESS_KEY

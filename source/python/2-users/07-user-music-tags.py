@@ -3,7 +3,7 @@ import simplejson, urllib
 import urllib2
 
 """
-5.2.3 user's musics tags
+2-07 user's musics tags
 
 format : https://api.pudding.to/v1/users/{user-id}/musics?appToen=APP_TOKEN
 sample : https://api.pudding.to/v1/users/181651/musics?appToken=APP_TOKEN
@@ -17,7 +17,7 @@ USER_ID = 77641
 
 def get_user_music_tags_json(userid, **args):
     """
-    get music tags written by user response format is json
+    get music tags written by user. response format is json
     """
     args.update({
             'access_key': ACCESS_KEY
@@ -30,7 +30,7 @@ def get_user_music_tags_json(userid, **args):
 
 def get_user_music_tags_xml(userid, **args):
     """
-    get music tags written by user response format is xml
+    get music tags written by user. response format is xml
     """
     args.update({
             'access_key': ACCESS_KEY

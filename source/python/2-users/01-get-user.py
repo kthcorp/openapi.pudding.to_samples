@@ -3,7 +3,7 @@ import simplejson, urllib
 import urllib2
 
 """
-5.2.1 get user information
+2-01 get user information
 
 format : https://api.pudding.to/v1/users/{user-id}?appToen=APP_TOKEN
 sample : https://api.pudding.to/v1/users/181651?appToken=APP_TOKEN

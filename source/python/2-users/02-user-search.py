@@ -3,7 +3,7 @@ import simplejson, urllib
 import urllib2
 
 """
-5.2.2 search user
+2-02 search user
 
 format : https://api.pudding.to/v1/users/search?user_id={user-id}&appToen=APP_TOKEN
 sample : https://api.pudding.to/v1/users/search?user_id=181651&appToken=APP_TOKEN
@@ -19,10 +19,11 @@ def get_user_search_json(userid, **args):
     get user information by userid, response format is json
     """
     args.update({
-            'appToken': ACCESS_KEY
+            'appToken': ACCESS_KEY,
+            'user_id' : str(userid)
             })
 
-    url = SEARCH_BASE + ".json" + "?user_id=" + str(userid) + '?' + urllib.urlencode(args)
+    url = SEARCH_BASE + '?' + urllib.urlencode(args)
     result = simplejson.load(urllib.urlopen(url))
 
     return result
@@ -32,10 +33,11 @@ def get_user_search_xml(userid, **args):
     get user information by userid, response format is xml
     """
     args.update({
-            'appToken': ACCESS_KEY
+            'appToken': ACCESS_KEY,
+            'user_id' : str(userid)
             })
 
-    url = SEARCH_BASE + ".xml" + "?user_id=" + str(userid) + '?' + urllib.urlencode(args)
+    url = SEARCH_BASE + ".xml" + '?' + urllib.urlencode(args)
     result = urllib2.urlopen(url).read()
 
     return result

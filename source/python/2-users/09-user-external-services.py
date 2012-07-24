@@ -3,7 +3,7 @@ import simplejson, urllib
 import urllib2
 
 """
-5.2.3 user's musics tags
+2-09 Get user's external service information
 
 format : https://api.pudding.to/v1/users/{user-id}/locations?appToen=APP_TOKEN
 sample : https://api.pudding.to/v1/users/77641/locations?appToken=APP_TOKEN
@@ -17,7 +17,7 @@ USER_ID = 77641
 
 def get_user_locations_json(userid, **args):
     """
-    get locations written by user response format is json
+   Get user's external service information. Response format is json
     """
     args.update({
             'access_key': ACCESS_KEY
@@ -30,7 +30,7 @@ def get_user_locations_json(userid, **args):
 
 def get_user_locations_xml(userid, **args):
     """
-    get locations written by user response format is xml
+    Get user's external service information. Response format is xml
     """
     args.update({
             'access_key': ACCESS_KEY
