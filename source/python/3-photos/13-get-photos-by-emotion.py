@@ -3,7 +3,7 @@ import simplejson, urllib
 import urllib2
 
 ACCESS_KEY = "96474e57-cb16-11e1-91b7-12313f062e84"
-SEARCH_BASE ="http://openapi.pudding.to/api/v1/photos/"
+SEARCH_BASE = "http://openapi.pudding.to/api/v1/photos/"
 
 
 def get_photos_by_emotion_json(emotionid, **args):
@@ -35,7 +35,7 @@ def get_photos_by_emotion_xml(emotionid, **args):
 
 if __name__ == "__main__" :
     
-    emotionid = 2
+    emotionid = 4
 
     json = get_photos_by_emotion_json(emotionid)
     print json
