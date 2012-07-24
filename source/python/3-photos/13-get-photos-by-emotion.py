@@ -8,7 +8,7 @@ SEARCH_BASE ="http://openapi.pudding.to/api/v1/photos/"
 
 def get_photos_by_emotion_json(emotionid, **args):
     """
-    Get photos by emotion 
+    Get photos by emotion id 
     """
     args.update({
             'access_key': ACCESS_KEY
@@ -21,7 +21,7 @@ def get_photos_by_emotion_json(emotionid, **args):
 
 def get_photos_by_emotion_xml(emotionid, **args):
     """
-    Get photos by emotion 
+    Get photos by emotion id 
     """
     args.update({
             'access_key': ACCESS_KEY
