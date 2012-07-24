@@ -3,14 +3,14 @@ import simplejson, urllib
 import urllib2
 
 """
-2-04 get user who likes photo 
+04 get user who likes photo 
 
 format : https://api.pudding.to/v1/photos/{photo-id}/likes?appToen=APP_TOKEN
 sample : https://api.pudding.to/v1/photos/3635879/likes?appToken=APP_TOKEN
 """
 
 ACCESS_KEY = "96474e57-cb16-11e1-91b7-12313f062e84"
-SEARCH_BASE ="http://openapi.pudding.to/api/v1/photos/"
+SEARCH_BASE = "http://openapi.pudding.to/api/v1/photos/"
 
 PHOTO_ID = 3635879
 
