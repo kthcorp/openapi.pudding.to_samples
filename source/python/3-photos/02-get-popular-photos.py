@@ -3,41 +3,35 @@ import simplejson, urllib
 import urllib2
 
 """
-2-02 get popular photos 
+3-02 get popular photos 
 
-format : https://api.pudding.to/v1/photos/popular?appToen=APP_TOKEN
-sample : https://api.pudding.to/v1/photos/popular?appToken=APP_TOKEN
+format : https://api.pudding.to/v1/photos/popular?access_key=TEST_ACCESS_KEY&token=TEST_TOKEN
+sample : https://api.pudding.to/v1/photos/popular?access_key=TEST_ACCESS_KEY&token=TEST_TOKEN
 """
 
 ACCESS_KEY = "96474e57-cb16-11e1-91b7-12313f062e84"
-SEARCH_BASE ="http://openapi.pudding.to/api/v1/photos/popular"
+API_BASE = "http://openapi.pudding.to/api/v1/photos/popular"
 
 
-def get_popular_photos_json(**args):
+def get_popular_photos(**args):
     args.update({
             'access_key': ACCESS_KEY
             })
 
-    url = SEARCH_BASE + '?' + urllib.urlencode(args)
-    result = simplejson.load(urllib.urlopen(url))
-
-    return result
-
-def get_popular_photos_xml(**args):
-    args.update({
-            'access_key': ACCESS_KEY
-            })
-
-    url = SEARCH_BASE + ".xml" + '?' + urllib.urlencode(args)
-    result = urllib2.urlopen(url).read()
+    url = API_BASE + '?' + urllib.urlencode(args)
+    
+    if('format' in args and args['format'] == 'xml'):
+        result = urllib2.urlopen(url).read()
+    else:
+        result = simplejson.load(urllib.urlopen(url))
 
     return result
 
 
 if __name__ == "__main__" :
     
-    json = get_popular_photos_json()
+    json = get_popular_photos()
     print json
 
-    xml = get_popular_photos_xml()
+    xml = get_popular_photos(format='xml')
     print xml
